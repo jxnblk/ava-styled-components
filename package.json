@@ -1,0 +1,30 @@
+{
+  "name": "ava-styled-components",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/LonRes/ava-styled-components",
+  "license": "MIT",
+  "scripts": {
+    "lint": "imflavio lint 'src/**/*.js'",
+    "format": "imflavio format 'src/**/*.js'",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "css": "2.2.3"
+  },
+  "devDependencies": {
+    "@imflavio/tools": "1.1.1",
+    "husky": "0.14.3",
+    "lint-staged": "7.0.5"
+  },
+  "peerDependencies": {
+    "styled-components": ">=2.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --config node_modules/@imflavio/tools/.eslintrc --fix",
+      "prettier --config node_modules/@imflavio/tools/.prettierrc",
+      "git add"
+    ]
+  }
+}
