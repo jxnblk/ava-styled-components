@@ -44,9 +44,9 @@ const getClassNames = () =>
 const getComponentIDs = () =>
   extract(/sc-component-id: ([^\\*\\/]*) \*\//g).split(/\s/)
 
-export const getCSS = () => css.parse(getStyle())
+exports.getCSS = () => css.parse(getStyle())
 
-export const getHashes = () =>
+exports.getHashes = () =>
   getClassNames()
     .concat(getComponentIDs())
     .filter(Boolean)
